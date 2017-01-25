@@ -3,26 +3,30 @@ class Box
 	  @width, @height = w, h
 	end
 
-	private
+	protected
 	def getArea
 	  @width * @height
 	end
 end
 
-class BigBox<Box
-	def initialize(w,h,l)
-		super(w,h)
+class BigBox
+	def initialize(l)
+		
 		@length=l
+	end
+
+	def get_result
+		getArea
 	end
 end
 
 
 box = Box.new(10, 20)
-bigbox = BigBox.new(100, 20,30)
+bigbox = BigBox.new(30)
 
 
-a = box.getArea
-b = bigbox.getArea
+# a = box.getArea
+b = bigbox.get_result
 
-puts "Area of the box is : #{a}"
+# puts "Area of the box is : #{a}"
 puts "Area of the bigbox is : #{b}"
