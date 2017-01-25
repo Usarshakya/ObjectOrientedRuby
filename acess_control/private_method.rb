@@ -3,10 +3,6 @@ class Box
 	  @width, @height = w, h
 	end
 
-	def get_result
-		getArea
-	end
-
 	private
 	def getArea
 	  @width * @height
@@ -25,8 +21,8 @@ box = Box.new(10, 20)
 bigbox = BigBox.new(100, 20,30)
 
 
-a = box.get_result
-b = bigbox.get_result
+a = box.getArea
+b = bigbox.getArea
 
 puts "Area of the box is : #{a}"
 puts "Area of the bigbox is : #{b}"
